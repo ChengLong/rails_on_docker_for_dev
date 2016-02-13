@@ -1,6 +1,8 @@
 FROM phusion/passenger-ruby22:0.9.18
 MAINTAINER Cheng Long <me@chengl.com>
 
+RUN apt-get update && apt-get install -qq -y libpq-dev --fix-missing --no-install-recommends
+
 # Hack to get around the boot2docker volume mounte issue
 # https://github.com/boot2docker/boot2docker/issues/581
 # https://github.com/docker/docker/issues/7198#issuecomment-159736577

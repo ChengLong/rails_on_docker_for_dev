@@ -9,3 +9,10 @@ services:
       - "80:80"
     volumes:
       - ".:/home/app/rails_on_docker_for_dev"
+    links:
+      - db
+
+  db:
+    image: postgres:9.4.5
+    ports:
+      - '5432:5432'
