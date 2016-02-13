@@ -1,0 +1,11 @@
+version: '2'
+services:
+  web:
+    build:
+      context: .
+      args:
+        - LOCAL_USER_ID=${LOCAL_USER_ID}
+    ports:
+      - "80:80"
+    volumes:
+      - ".:/home/app/rails_on_docker_for_dev"
