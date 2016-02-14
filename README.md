@@ -18,5 +18,8 @@ You can find a detailed blog post [here](https://chengl.com/using-docker-for-rai
 1. `git clone https://github.com/ChengLong/rails_on_docker_for_dev.git`
 2. `cd rails_on_docker_for_dev`
 3. `LOCAL_USER_ID=$(id -u) docker-compose build`
-4. `docker-compose run --rm --user "$(id -u):$(id -g)" web bundle exec rake db:setup`
-5. `docker-compose up`
+4. `docker-compose run --rm --user "$(id -u):$(id -g)" web bundle install --path=vendor/bundle`
+5. `docker-compose run --rm --user "$(id -u):$(id -g)" web bundle exec rake db:setup`
+6. `docker-compose up`
+
+Point your broswer to `docker-host-ip`. Enjoy!
