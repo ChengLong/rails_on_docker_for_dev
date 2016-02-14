@@ -22,4 +22,4 @@ You can find a detailed blog post [here](https://chengl.com/using-docker-for-rai
 5. `docker-compose run --rm --user "$(id -u):$(id -g)" web bundle exec rake db:setup`
 6. `docker-compose up`
 
-Point your broswer to `docker-host-ip`. Enjoy!
+Point your broswer to `<docker-host-ip>/posts`. Enjoy!
